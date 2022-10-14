@@ -12,8 +12,9 @@ try{
 catch(PDOException $e){
     die('Erreur :'.$e->getMessage());
 }
-if (isset($_POST['id'])&&
-    isset($_POST['nom'])&&
+
+
+if  (isset($_POST['nom'])&&
     isset($_POST['prenom'])&&
     isset($_POST['mail'])&&
     isset($_POST['filiere'])&&
@@ -22,7 +23,7 @@ if (isset($_POST['id'])&&
     isset($_POST['adresse'])&&
     isset($_POST['region'])
     ){
-    $insertion=$newBD->prepare('INSERT INTO eleve VALUES(NULL,:Nom,:Prenom,:Mail,:filiere,:Annee,:Ville,:Adresse,:Region)');
+    $insertion=$newBD->prepare('INSERT INTO eleve(Nom,Prenom,Mail,filiere,Annee,Ville,Adresse,Region) VALUES(:Nom,:Prenom,:Mail,:filiere,:Annee,:Ville,:Adresse,:Region)');
     $insertion->bindValue(':Nom',$_POST['nom']);
     $insertion->bindValue(':Prenom',$_POST['prenom']);
     $insertion->bindValue(':Mail',$_POST['mail']);
@@ -38,5 +39,10 @@ if (isset($_POST['id'])&&
     else{
         print "Echec d'envoi";
     }
-
+    
 }
+print '<script type="text/javascript">
+    window.onload = function () { alert("Données Envoyées !"); } 
+</script>'; 
+header("location:../html/index.html");
+
