@@ -41,8 +41,6 @@ if  (isset($_POST['nom'])&&
     }
     
 }
-print '<script type="text/javascript">
-    window.onload = function () { alert("Données Envoyées !"); } 
-</script>'; 
+ 
 header("location:../html/index.html");
 
