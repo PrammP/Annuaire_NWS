@@ -15,69 +15,55 @@
 </html>
 <a href="../php/Admin.php">Tableau</a>
 <div class="mv1380-max">
-<form action="../php/annuaire.php" method="post">
+<form>
     <div class="form-row">
         <div class="form-group col-md-6">
-         
             <label for="inputName">Nom</label>
-            <input type="text" name="nom" class="form-control" id="nom" placeholder="Nom">
+            <input type="text" name="nom" class="form-control" id="Name" placeholder="Nom">
         </div>
-        <div class = "rouge cache " id="name"> <strong>Veuillez rentrer un nom <br/></strong></div>
         <div class="form-group col-md-6">
-        
             <label for="inputSurname">Prenom</label>
-            <input type="text" name="prenom"class="form-control" id="prenom" placeholder="Prenom">
+            <input type="text" name="prenom"class="form-control" id="Forname" placeholder="Prenom">
         </div>
-        <div class = "rouge cache" id="lname"><strong> Veuillez rentrer votre prenom </strong></div>
         </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        
         <label for="inputEmail4">Email</label>
-        <input type="email" name="mail" class="form-control" id="mail" placeholder="Email">
+        <input type="email" nom="mail" class="form-control" id="inputEmail4" placeholder="Email">
       </div>
-      <div class = "rouge cache" id="email"><strong> Veuillez rentrer votre mail </strong></div>
       <div class="form-group col-md-6">
-        
         <label for="inputFil">Filière Voulue</label>
-        <select id="filiere" name="filiere" class="form-control">
+        <select id="inputfil" nom="filiere" class="form-control">
         <option selected>Choisissez une option...</option>
                 <option>Développement Web</option>
                 <option>Communication - Graphique</option>
                 <option>Social Media Management</option>
                 <option>E-Business</option>
-                <option>Ne sais pas</option>
               </select>
       </div>
     </div>
-    <div class = "rouge cache" id="ffiliere"><strong> Veuillez choisir une filière </strong></div>
+
     <div class="form-group col-md-6">
       <label for="inputAnnee">Année Voulue</label>
-      <select id="Annee" name="Annee" class="form-control">
+      <select id="inputannee" nom="Annee" class="form-control">
       <option selected>Choisissez une option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
+              <option>1 ère</option>
+              <option>2 ème</option>
+              <option>3 ème</option>
             </select>
     </div>
-    <div class = "rouge cache" id="aannee"><strong> Veuillez choisir une année  </strong></div>
     <div class="form-group">
-      
       <label for="inputAddress">Adresse</label>
-      <input type="text" name="adresse" class="form-control" id="adresse" placeholder="1234 Main St">
+      <input type="text" name="adresse" class="form-control" id="inputAddress" placeholder="1234 Main St">
     </div>
-    <div class = "rouge cache" id="aadresse"><strong> Veuillez rentrer une adresse </strong></div>
     <div class="form-row">
         <div class="form-group col-md-6">
-          
             <label for="inputCity">Ville</label>
-            <input type="text" name="ville" class="form-control" id="ville">
+            <input type="text" name="ville" class="form-control" id="inputCity">
         </div>
-        <div class = "rouge cache" id="vville"><strong> Veuillez rentrer votre ville </strong></div>
         <div class="form-group col-md-4">
-          
             <label for="inputState">Région</label>
-            <select  name="region" id="region" class="form-control">
+            <select id="inputState" name="region" class="form-control">
                 <option selected>Choisissez une option...</option>
                 <option>Auvergne-Rhône-Alpes</option>
                 <option>Bretagne</option>
@@ -94,14 +80,7 @@
                 <option>Pays de la Loire</option>
             </select>
       </div>
-      <div class = "rouge cache" id="rregion"><strong> Veuillez choisir une région </strong></div>
     </div>
-    <div class="rouge cache" id="verif">
-      <strong> Le formulaire est invalide </strong>
-    </div>
-    <p>
-    <input type="submit" id="button"class="btn btn-primary">
-  </p>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
   </form>
 </div>
-<script src="../index.js"> </script>
