@@ -1,10 +1,5 @@
 <?php
-
- $json_data = file_get_contents("http://localhost/Annuaire_NWS/Annuaire_NWS/js/configDatabase.json");
- $data = json_decode($json_data);
- $newBD = new PDO("mysql:host=".$data->server.";dbname=".$data->database,$data->user,$data->password);
-
- $dbh = $newBD;
+include "connect.php";
 
 if  (isset($_POST['nom'])&&
     isset($_POST['prenom'])&&
@@ -15,7 +10,7 @@ if  (isset($_POST['nom'])&&
     isset($_POST['adresse'])&&
     isset($_POST['region'])
     ){
-    $insertion=$dbh->prepare('INSERT INTO eleve(Nom,Prenom,Mail,filiere,Annee,Ville,Adresse,Region) VALUES(:Nom,:Prenom,:Mail,:filiere,:Annee,:Ville,:Adresse,:Region)');
+    $insertion=$newBD->prepare('INSERT INTO eleve(Nom,Prenom,Mail,filiere,Annee,Ville,Adresse,Region) VALUES(:Nom,:Prenom,:Mail,:filiere,:Annee,:Ville,:Adresse,:Region)');
     $insertion->bindValue(':Nom',$_POST['nom']);
     $insertion->bindValue(':Prenom',$_POST['prenom']);
     $insertion->bindValue(':Mail',$_POST['mail']);
