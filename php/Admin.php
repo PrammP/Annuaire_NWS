@@ -1,28 +1,33 @@
 
 
 <h1 class=h1>Dashboard Admin</h1>
+
 <table>
     <tr>
 
-
+        
         <td><strong>Nom</strong></td>
         <td><strong>Prénom</strong></td>
         <td><strong>Mail</strong></td>
         <td><strong>Filiere</strong></td>
         <td><strong>Annee</strong></td>
+        <td><strong>Ville</strong></td>
         <td><strong>Adresse</strong></td>
         <td><strong>Region</strong></td>
-        <td><strong>Message</strong></td>
-        <td><strong>Sujet</strong></td>
-        <td><strong>Mail</strong></td>
+        
+      
 
     </tr>
 
 <?php
-include "connect.php";
+
+include "connect.php"; 
+include "delete.php";
+include "update.php";
     foreach ($newBD->query('SELECT * FROM `eleve`') as $row) {
         $row = array_map("utf8_encode", $row);
 
+        $id = $row['eleve_id'];
         $nom = $row['Nom'];
         $prenom = $row['Prenom'];
         $mail = $row['Mail'];
@@ -43,8 +48,12 @@ include "connect.php";
         <td>$ville</td>
         <td>$adresse</td>
         <td>$region</td>
-        ";
+        <td><a href='Admin.php?id_supp=".$id."' id='delete'>Supprimer</a></td>
+        <td> <a href='Admin.php?id_edit=".$id."' id='update'>Editer</a> </td>"
+        ;
     }
+    
+    
 
  $dbb = null;
 

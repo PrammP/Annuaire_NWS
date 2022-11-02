@@ -1,5 +1,5 @@
 <?php
-include "connect.php";
+include "database.php";
 
 if  (isset($_POST['nom'])&&
     isset($_POST['prenom'])&&
