@@ -123,3 +123,10 @@ body {
     text-decoration: none;
   }
   label{color: white;}
+
+  a#update{
+    color: white;
+  }
+  a{
+    color: red;
+  }

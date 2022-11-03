@@ -15,7 +15,7 @@ if  (isset($_POST['nom'])&&
     isset($_POST['adresse'])&&
     isset($_POST['region'])
     ){
-    $insertion=$newBD->prepare('INSERT INTO eleve(Nom,Prenom,Mail,filiere,Annee,Ville,Adresse,Region) VALUES(:Nom,:Prenom,:Mail,:filiere,:Annee,:Ville,:Adresse,:Region)');
+    $insertion=$newBD->prepare('INSERT INTO eleve(Nom,Prenom,Mail,filiere,Annee,Ville,Adresse,Region) VALUES(:Nom,:Prenom,:Mail,:filiere,:Annee,:ville,:adresse,:region)');
 
    
 
@@ -24,17 +24,10 @@ if  (isset($_POST['nom'])&&
     $insertion->bindValue(':Mail',$_POST['mail']);
     $insertion->bindValue(':filiere',$_POST['filiere']);
     $insertion->bindValue(':Annee',$_POST['Annee']);
-    $insertion->bindValue(':Ville',$_POST['ville']);
-    $insertion->bindValue(':Adresse',$_POST['adresse']);
-    $insertion->bindValue(':Region',$_POST['region']);
-    $verification=$insertion->execute();
-    if ($verification) {
-        print "<br>Données Envoyé !";
-    }
-    else{
-        print "Echec d'envoi";
-    }
-    
+    $insertion->bindValue(':ville',$_POST['ville']);
+    $insertion->bindValue(':adresse',$_POST['adresse']);
+    $insertion->bindValue(':region',$_POST['region']);
+    $insertion->execute();
 }
  
 header("location:../html/index.html");

@@ -7,5 +7,6 @@ $newBD = new PDO("mysql:host=".$data->server.";dbname=".$data->database,$data->u
 
 
 
+
             
       

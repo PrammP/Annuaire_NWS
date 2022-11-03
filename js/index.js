@@ -1,6 +1,5 @@
 let e;
 let error;
-include 
 
 function checkError(element, id)
 {
