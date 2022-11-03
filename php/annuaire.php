@@ -3,6 +3,7 @@
 </html>
 
 <?php
+include "eleve.php";
 include "database.php";
 
 if  (isset($_POST['nom'])&&
@@ -15,6 +16,9 @@ if  (isset($_POST['nom'])&&
     isset($_POST['region'])
     ){
     $insertion=$newBD->prepare('INSERT INTO eleve(Nom,Prenom,Mail,filiere,Annee,Ville,Adresse,Region) VALUES(:Nom,:Prenom,:Mail,:filiere,:Annee,:Ville,:Adresse,:Region)');
+
+    $newStudent = new Eleve();
+
     $insertion->bindValue(':Nom',$_POST['nom']);
     $insertion->bindValue(':Prenom',$_POST['prenom']);
     $insertion->bindValue(':Mail',$_POST['mail']);
