@@ -10,7 +10,7 @@ body {
 }
 .mv1380-max {
     max-width: 60vw;
-    margin-left: auto;
+    margin-left: 36%;
     margin-right: auto;
     margin-top: 5vh;
 }
@@ -61,6 +61,57 @@ body {
   }
 
   h1{
-    margin-left: 800px;
+    margin-left: 45%;
+    margin-bottom: 2%;
+    margin-top: 3%;
   
+  }
+  .ReturnAnnu{
+    width: 10%;
+    height: 7%;
+    font-size: 15px;
+    margin-left: 45%;
+    margin-top: 150px;
+
+  }
+  #button{
+    margin-top: 2%;
+  }
+  button{
+    background-color: #0d6efd;
+    border-radius: 5px 5px 5px 5px;
+    border : none;
+  }
+  button a{
+    text-decoration: none;
+    color: white;
+    
+  }
+  
+  a:hover {
+    color: white;
+
+  }
+  .jerange{
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+  }
+  #tab {
+    text-decoration: none;
+    color: white;
+    padding: 7px 20px ;
+   
+    background-color: #0d6efd;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 4px;
+    
+  }
+  #priseC{
+    margin-left: 35%;
+  }
+  .form-control{
+    width: 500px;
   }

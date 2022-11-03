@@ -60,7 +60,7 @@ include "update.php";
 
 ?>
 </table>
-<button> 
+<button class="ReturnAnnu"> 
 <a href="../html/Index.html">Retour au formulaire</a>
 </button>
 
