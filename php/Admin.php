@@ -85,13 +85,8 @@ include "update.php";
         <td><a href='Admin.php?id_supp=".$id."' id='delete'>Supprimer</a></td>"
 
         ;
-    }
-    
-
- 
-
-        ;
     };
+    
  
 
  
