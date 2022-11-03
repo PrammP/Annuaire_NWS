@@ -1,5 +1,5 @@
 {
-    "host" : "localhost",
+    "server" : "localhost",
     "database" : "annuaire",
     "user" : "root",
     "password" : ""
