@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap);
+
+*{
+  font-family:  'Trebuchet MS';
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,4 +19,11 @@ body {
   }
 .rouge{
     color: red;  
+  }
+  td{
+    width : 7%;
+    color: black;
+    border-left: black;
+    border-right: black;
+    margin-left: 250px;
   }

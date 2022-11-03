@@ -1,3 +1,7 @@
+<html>
+<link  href="../css/style.css" rel="stylesheet">
+</html>
+
 <?php
 include "database.php";
 

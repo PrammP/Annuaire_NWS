@@ -1,11 +1,11 @@
 
 
 <h1 class=h1>Dashboard Admin</h1>
-
+<link  href="../css/style.css" rel="stylesheet">
 <table>
     <tr>
 
-        
+    <div class="contain">
         <td><strong>Nom</strong></td>
         <td><strong>Prénom</strong></td>
         <td><strong>Mail</strong></td>
@@ -14,9 +14,7 @@
         <td><strong>Ville</strong></td>
         <td><strong>Adresse</strong></td>
         <td><strong>Region</strong></td>
-        
-      
-
+        </div>
     </tr>
 
 <?php
@@ -24,6 +22,7 @@
 include "connect.php"; 
 include "delete.php";
 include "update.php";
+
     foreach ($newBD->query('SELECT * FROM `eleve`') as $row) {
         $row = array_map("utf8_encode", $row);
 
@@ -38,7 +37,8 @@ include "update.php";
         $region = $row['Region'];
 
 
-        print "<tr> 
+        print "
+        <tr> 
         
         <td>$nom</td>
         <td>$prenom</td>
