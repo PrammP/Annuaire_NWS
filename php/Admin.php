@@ -24,7 +24,6 @@
 include "connect.php"; 
 include "delete.php";
 include "update.php";
-include "Eleve.php";
 
 
     foreach ($newBD->query('SELECT * FROM `eleve` ') as $row) {
@@ -83,12 +82,11 @@ include "Eleve.php";
         <td>$adresse</td>F
         <td>$region</td>
         <td><a href='Admin.php?id_supp=".$id."' id='delete'>Supprimer</a></td>"
-
         ;
     }
     
 
- 
+ $dbb = null;
 
  $tri = "SELECT * from `eleve`";
  if(isset($_GET['s']) AND !empty($_GET['s'])){

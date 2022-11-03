@@ -1,16 +1,16 @@
 <?php 
-
+include "database.php";
 
 class Eleve {
 
-   public $id ;
-   public $nom ;
-   public $prenom ;
-   public $mail ;
-   public $filiere ;
-   public $Annee ;
-   public $ville ;
-   public $adresse ;
-   public $region ;
+    $id = $row['eleve_id'];
+    $nom = $row['Nom'];
+    $prenom = $row['Prenom'];
+    $mail = $row['Mail'];
+    $filiere = $row['filiere'];
+    $Annee = $row['Annee'];
+    $ville = $row['Ville'];
+    $adresse = $row['Adresse'];
+    $region = $row['Region'];
 
 }
