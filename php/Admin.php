@@ -77,7 +77,7 @@ include "update.php";
                 break;
         }
         print "
-        <td>$Annee</td>
+        
         <td>$Ville</td>
         <td>$Adresse</td>
         <td>$Region</td>
